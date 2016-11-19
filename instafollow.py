@@ -7,7 +7,18 @@
 
 # bro.find_elements_by_xpath("//span[@class='_fbms8 _e616g']")[0].click()
 
+import time, os, random, re
+from bs4 import BeautifulSoup as bs
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 
+os.system('clear')
+
+bro = webdriver.Chrome()
+bro.set_window_size(1090,1050)
+bro.set_window_position(830, 30)
+bro.get('http://www.instagram.com/')
 
 while 1:
   i=0;num=len(bro.find_elements_by_xpath("//a[@class='_8mlbc _vbtk2 _t5r8b']"));print str(num),'carregados..'
